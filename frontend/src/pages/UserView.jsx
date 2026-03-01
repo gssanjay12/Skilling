@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import api from '../services/api';
 import { useAuth } from '../context/AuthContext';
-import { Mail, ArrowLeft, BookOpen, Clock, Building } from 'lucide-react';
+import { Mail, ArrowLeft, BookOpen, Clock, Building, Phone } from 'lucide-react';
 
 const UserView = () => {
     const { id } = useParams();
@@ -53,6 +53,12 @@ const UserView = () => {
                             <span className="flex items-center">
                                 <Clock className="w-4 h-4 mr-1.5 text-gray-400" />
                                 {profile.availability}
+                            </span>
+                        )}
+                        {profile.phone_number && (
+                            <span className="flex items-center">
+                                <Phone className="w-4 h-4 mr-1.5 text-gray-400" />
+                                {profile.phone_number}
                             </span>
                         )}
                         <a

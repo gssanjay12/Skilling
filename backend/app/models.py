@@ -13,6 +13,7 @@ class User(Base):
     college = Column(String, nullable=True)
     bio = Column(String, nullable=True)
     availability = Column(String, nullable=True)
+    phone_number = Column(String, nullable=True)
     created_at = Column(DateTime, default=datetime.datetime.utcnow)
 
     skills = relationship("UserSkill", back_populates="user", cascade="all, delete-orphan")

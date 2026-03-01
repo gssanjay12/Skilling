@@ -8,6 +8,7 @@ const Register = () => {
         full_name: '',
         email: '',
         password: '',
+        phone_number: '',
         college: '',
     });
     const [error, setError] = useState('');
@@ -80,6 +81,16 @@ const Register = () => {
                                 required
                                 className="input-field"
                                 value={formData.password}
+                                onChange={handleChange}
+                            />
+                        </div>
+                        <div>
+                            <label className="label-text">Phone Number</label>
+                            <input
+                                type="tel"
+                                name="phone_number"
+                                className="input-field"
+                                value={formData.phone_number}
                                 onChange={handleChange}
                             />
                         </div>

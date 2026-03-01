@@ -33,6 +33,7 @@ class UserBase(BaseModel):
     college: str | None = None
     bio: str | None = None
     availability: str | None = None
+    phone_number: str | None = None
 
 class UserCreate(UserBase):
     password: str
@@ -42,6 +43,7 @@ class UserUpdate(BaseModel):
     college: str | None = None
     bio: str | None = None
     availability: str | None = None
+    phone_number: str | None = None
 
 class User(UserBase):
     id: int

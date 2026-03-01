@@ -9,6 +9,7 @@ const Profile = () => {
     const [formData, setFormData] = useState({
         bio: user.bio || '',
         college: user.college || '',
+        phone_number: user.phone_number || '',
         availability: user.availability || '',
     });
 
@@ -134,6 +135,15 @@ const Profile = () => {
                                     />
                                 </div>
                                 <div>
+                                    <label className="label-text">Phone Number</label>
+                                    <input
+                                        type="tel"
+                                        className="input-field"
+                                        value={formData.phone_number}
+                                        onChange={e => setFormData({ ...formData, phone_number: e.target.value })}
+                                    />
+                                </div>
+                                <div>
                                     <label className="label-text">Availability</label>
                                     <input
                                         type="text"
@@ -156,8 +166,12 @@ const Profile = () => {
                                     <p className="text-gray-900">{user.email}</p>
                                 </div>
                                 <div>
-                                    <h3 className="text-gray-500 font-medium">College</h3>
+                                    <label className="label-text">College</label>
                                     <p className="text-gray-900">{user.college || '-'}</p>
+                                </div>
+                                <div>
+                                    <h3 className="text-gray-500 font-medium">Phone Number</h3>
+                                    <p className="text-gray-900">{user.phone_number || '-'}</p>
                                 </div>
                                 <div>
                                     <h3 className="text-gray-500 font-medium">Bio</h3>
