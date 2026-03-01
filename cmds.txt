@@ -1,0 +1,8 @@
+Backend - http://127.0.0.1:8080
+Frontend - http://localhost:5173
+
+.\venv\Scripts\Activate
+
+uvicorn app.main:app --port 8080 --reload
+
+npm run dev
